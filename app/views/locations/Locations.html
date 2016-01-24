@@ -1,7 +1,7 @@
 <h5>Locations</h5>
 <div class="clearfix"></div>
+<a href="/Locations/Add/" class="btn btn-success">Creat</a>
 <div>
-
     <table class="table table-striped" ng-table="tableParams">
         <thead>
             <tr>
@@ -18,9 +18,10 @@
                 {{location.Description}}
             </td>
             <td style="width: 4%;">
-                <a href="#"><i class=""></i></a>
+                <a href="/Locations/Detail/{{location.Id}}" class="btn btn-success"><i class="fa fa-eye"></i> Detail</a>
             </td>
             <td style="width: 4%;">
+                <a href="/Locations/Edit/{{location.Id}}" class="btn btn-success"><i class="fa fa-pencil"></i> Edit</a>
             </td>
         </tr>
         <tr ng-hide="$data">

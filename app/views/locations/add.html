@@ -1,0 +1,24 @@
+ <h5>Add Location</h5>
+<div class="clearfix"></div>
+<form name="locationform"  role="form" class="form-horizontal">
+    <div class="form-group">
+        <label  class="control-label col-sm-2" for="name">Name<span style="color:Red">*</span></label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="name" placeholder="Name"  required ng-model="location.Name">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="description">
+            Description<span style="color:Red">*</span>
+        </label>
+        <div class="col-sm-10">
+             <textarea class="form-control" id="description" placeholder="Description" required ng-model="location.Description"></textarea>
+        </div>      
+    </div>
+    <div class="form-group">
+        <button data-ng-disabled="locationform.$invalid" ng-click="addLocation(location)" class="btn btn-success">
+            Save
+        </button>
+        <a class="btn btn-default" href="/">Cancel</a>
+    </div>
+</form> 

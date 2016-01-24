@@ -4,7 +4,9 @@ app.factory("serviceHelperSvc", function($http, $resource) {
 		return url;
 	}
 	return {
-		Location: $resource(builUrl("/api/Locations"), {}, {
+		Location: $resource(builUrl("/api/Locations/:locationId"), {
+			locationId: "@id"
+		}, {
 			"GET": {
 				method: "GET"
 			}

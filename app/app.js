@@ -9,8 +9,20 @@ app.config(function($routeProvider, $locationProvider, $httpProvider) {
 	});
 	$routeProvider
 		.when("/", {
-			templateUrl: "/app/views/locations/Locations.html",
+			templateUrl: "/app/views/locations/locations.html",
 			controller: "locationsCtrl"
+		})
+		.when("/Locations/Detail/:locationId", {
+			templateUrl: "/app/views/locations/detail.html",
+			controller: "locationCtrl"
+		})
+		.when("/Locations/Edit/:locationId", {
+			templateUrl: "/app/views/locations/_edit.html",
+			controller: "locationCtrl"
+		})
+		.when("/Locations/Add/", {
+			templateUrl: "/app/views/locations/add.html",
+			controller: "locationCtrl"
 		})
 		.otherwise({
 			redirectTo: "/"
