@@ -17,11 +17,11 @@ app.config(function($routeProvider, $locationProvider, $httpProvider) {
 			controller: "locationCtrl"
 		})
 		.when("/Locations/Edit/:locationId", {
-			templateUrl: "/app/views/locations/_edit.html",
+			templateUrl: "/app/views/locations/edit_1.html",
 			controller: "locationCtrl"
 		})
-		.when("/Locations/Add/", {
-			templateUrl: "/app/views/locations/add.html",
+		.when("/Locations/Add", {
+			templateUrl: "/app/views/locations/add_.html",
 			controller: "locationCtrl"
 		})
 		.otherwise({

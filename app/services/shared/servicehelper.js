@@ -8,7 +8,11 @@ app.factory("serviceHelperSvc", function($http, $resource) {
 			locationId: "@id"
 		}, {
 			"GET": {
-				method: "GET"
+				method: "GET",
+				isArray: true
+			},
+			"update": {
+				method: "PUT"
 			}
 		})
 	}
